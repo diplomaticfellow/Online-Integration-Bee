@@ -286,33 +286,33 @@ document.addEventListener('DOMContentLoaded', () => {
 document.addEventListener('DOMContentLoaded', () => {
     // ... (keep your existing code)
 
-    // Typewriter effect for Organizing Committee
-    const organizingCommitteeHeading = document.getElementById('organizing-committee-heading');
-    const organizingCommitteeText = "Organizing Committee";
-    let organizingCommitteeIndex = 0;
+    // Typewriter effect for Organizing staff
+    const organizingstaffHeading = document.getElementById('organizing-staff-heading');
+    const organizingstaffText = "Organizing staff";
+    let organizingstaffIndex = 0;
 
-    function typeOrganizingCommittee() {
-        if (organizingCommitteeIndex < organizingCommitteeText.length) {
-            organizingCommitteeHeading.innerHTML += organizingCommitteeText.charAt(organizingCommitteeIndex);
-            organizingCommitteeIndex++;
-            setTimeout(typeOrganizingCommittee, 100); // Adjust the speed here (lower number = faster)
+    function typeOrganizingstaff() {
+        if (organizingstaffIndex < organizingstaffText.length) {
+            organizingstaffHeading.innerHTML += organizingstaffText.charAt(organizingstaffIndex);
+            organizingstaffIndex++;
+            setTimeout(typeOrganizingstaff, 100); // Adjust the speed here (lower number = faster)
         } else {
             // Remove the border-right to stop the blinking effect
-            organizingCommitteeHeading.style.borderRight = 'none';
+            organizingstaffHeading.style.borderRight = 'none';
         }
     }
 
-    // Intersection Observer for Organizing Committee section
-    const organizingCommitteeObserver = new IntersectionObserver((entries) => {
+    // Intersection Observer for Organizing staff section
+    const organizingstaffObserver = new IntersectionObserver((entries) => {
         entries.forEach(entry => {
-            if (entry.isIntersecting && organizingCommitteeIndex === 0) {
-                typeOrganizingCommittee();
-                organizingCommitteeObserver.unobserve(entry.target);
+            if (entry.isIntersecting && organizingstaffIndex === 0) {
+                typeOrganizingstaff();
+                organizingstaffObserver.unobserve(entry.target);
             }
         });
     }, { threshold: 0.5 });
 
-    organizingCommitteeObserver.observe(document.getElementById('organizing-committee-heading'));
+    organizingstaffObserver.observe(document.getElementById('organizing-staff-heading'));
 
     // ... (keep the rest of your existing code)
 });
