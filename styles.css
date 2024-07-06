@@ -518,3 +518,39 @@ nav ul li a,
     margin-top: 20px;
     text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5);
 }
+
+/* Base styles for all devices */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+.container {
+    width: 100%;
+    padding: 20px;
+}
+
+/* Styles for tablets and smaller devices */
+@media (max-width: 768px) {
+    .container {
+        padding: 10px;
+    }
+}
+
+/* Styles for phones and smaller devices */
+@media (max-width: 480px) {
+    .container {
+        padding: 5px;
+    }
+
+    .button-3d {
+        width: 100%;
+        font-size: 16px;
+    }
+}
+
+img {
+    max-width: 100%;
+    height: auto;
+}
