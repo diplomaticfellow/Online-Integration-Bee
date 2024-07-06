@@ -519,38 +519,81 @@ nav ul li a,
     text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5);
 }
 
-/* Base styles for all devices */
-body {
-    font-family: Arial, sans-serif;
-    margin: 0;
-    padding: 0;
-}
+/* Existing styles remain unchanged */
 
-.container {
-    width: 100%;
-    padding: 20px;
-}
+/* Media query for smaller screens */
+@media screen and (max-width: 768px) {
+    /* Adjust logo size */
+    nav .logo {
+        width: 60px; /* Reduce logo size */
+    }
 
-/* Styles for tablets and smaller devices */
-@media (max-width: 768px) {
-    .container {
-        padding: 10px;
+    /* Adjust navigation */
+    nav ul li a {
+        font-size: 14px; /* Smaller font for nav items */
+    }
+
+    /* Adjust hero section */
+    .home-hero-sub-heading {
+        font-size: 24px; /* Smaller font for subtitle */
+    }
+
+    /* Adjust buttons */
+    .button-3d {
+        padding: 10px 20px; /* Smaller padding */
+        font-size: 16px; /* Smaller font size */
+    }
+
+    /* Adjust main content */
+    .content-section h2 {
+        font-size: 28px; /* Smaller heading size */
+    }
+
+    .content-section h3 {
+        font-size: 20px; /* Smaller subheading size */
+    }
+
+    .content-section p,
+    .content-section li {
+        font-size: 16px; /* Smaller font size for paragraphs and list items */
+    }
+
+    /* Adjust event details */
+    .event-detail h3 {
+        font-size: 18px;
+    }
+
+    .event-detail p {
+        font-size: 14px;
+    }
+
+    /* Adjust organizing staff */
+    #organizing-staff-heading + ul li {
+        font-size: small; /* Slightly smaller than x-large */
     }
 }
 
-/* Styles for phones and smaller devices */
-@media (max-width: 480px) {
-    .container {
-        padding: 5px;
+/* For even smaller screens */
+@media screen and (max-width: 480px) {
+    .home-hero-sub-heading {
+        font-size: 20px; /* Even smaller font for subtitle */
     }
 
     .button-3d {
-        width: 100%;
-        font-size: 16px;
+        padding: 8px 16px; /* Even smaller padding */
+        font-size: 14px; /* Even smaller font size */
     }
-}
 
-img {
-    max-width: 100%;
-    height: auto;
+    .content-section h2 {
+        font-size: 24px; /* Even smaller heading size */
+    }
+
+    .content-section h3 {
+        font-size: 18px; /* Even smaller subheading size */
+    }
+
+    .content-section p,
+    .content-section li {
+        font-size: 14px; /* Even smaller font size for paragraphs and list items */
+    }
 }
