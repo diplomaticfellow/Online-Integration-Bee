@@ -484,7 +484,7 @@ nav ul li a,
     padding-right: 5px;
 }
 
-#organizing-committee-heading {
+#organizing-staff-heading {
     display: inline-block;
     border-right: white;
     white-space: nowrap;
@@ -506,12 +506,12 @@ nav ul li a,
     padding-right: 5px;
 }
 
-#organizing-committee-heading + ul {
+#organizing-staff-heading + ul {
     list-style-type: none;
     padding: 0;
 }
 
-#organizing-committee-heading + ul li {
+#organizing-staff-heading + ul li {
     font-size: x-large;
     color: aqua;
     margin-bottom: 20px;
