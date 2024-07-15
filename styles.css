@@ -10,7 +10,7 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    font-family: var(--font-family);
+    font-family: var(--font-family), serif;
 }
 
 body {
@@ -35,7 +35,7 @@ header {
     left: 0;
     width: 100%;
     z-index: 1000;
-    background-color: rgba(2, 53, 123, 0.8);
+    background-color: rgba(2, 53, 123, 0);
     backdrop-filter: blur(5px);
 }
 
@@ -161,11 +161,11 @@ nav ul li a:hover {
 }
 
 .content-section {
-    padding: 60px 10%;
-    min-height: auto;
+    padding: 80px 10%;
+    min-height: 100vh;
     display: flex;
     flex-direction: column;
-    justify-content: flex-start;
+    justify-content: center;
 }
 
 .content-section h2 {
@@ -191,10 +191,10 @@ nav ul li a:hover {
 .event-detail {
     flex: 1;
     min-width: 250px;
-    background-color: #5ac6c6;
+    background-color: aqua;
     padding: 20px;
     border-radius: 10px;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 4px 6px #0fA4AF;
 }
 
 .competition-rules ul, .prizes ul {
@@ -230,6 +230,7 @@ nav ul li a:hover {
     padding: 20px;
     border-radius: 10px;
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+
 }
 
 .sponsor img {
@@ -269,17 +270,237 @@ footer {
     color: var(--secondary-color);
 }
 
-#event-info-heading,
-#competition-rules-heading,
-#about-us-heading,
-#organizing-staff-heading,
-#sponsors-heading,
-#contact-us-heading {
+@media (max-width: 768px) {
+    nav ul {
+        display: none;
+    }
+
+    .home-hero-sub-heading {
+        font-size: 30px;
+    }
+
+    .button-3d {
+        font-size: 16px;
+        padding: 12px 24px;
+    }
+
+    .footer-content {
+        flex-direction: column;
+        gap: 15px;
+    }
+
+    .content-section {
+        padding: 60px 5%;
+    }
+
+    .event-details {
+        flex-direction: column;
+    }
+}
+
+/* Add this to your existing CSS */
+
+.button-3d, nav ul li a {
+    position: relative;
+    overflow: hidden;
+}
+
+.button-3d span, nav ul li a span {
+    position: absolute;
+    background: #fff;
+    transform: translate(-50%, -50%);
+    pointer-events: none;
+    border-radius: 50%;
+    animation: ripples 1s linear infinite;
+}
+
+@keyframes ripples {
+    0% {
+        width: 0;
+        height: 0;
+        opacity: 0.5;
+    }
+    100% {
+        width: 500px;
+        height: 500px;
+        opacity: 0;
+    }
+}
+
+/* Add this to your existing CSS */
+
+.sponsor-message {
+    text-align: center;
+    font-size: 24px;
+    color: white;
+    background-color: royalblue;
+    padding: 40px;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+nav ul li a,
+.button-3d {
+    position: relative;
+    overflow: hidden;
+    transition: color 0.3s ease;
+}
+
+.button-3d {
+    transition: all 0.3s ease;
+}
+
+.button-3d:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.3);
+}
+
+.button-3d:active {
+    transform: translateY(2px);
+    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.3);
+}
+
+@keyframes pulse {
+    0% {
+        transform: scale(1);
+    }
+    50% {
+        transform: scale(1.05);
+    }
+    100% {
+        transform: scale(1);
+    }
+}
+
+.button-3d:hover {
+    animation: pulse 1s infinite;
+}
+
+.event-detail {
+    flex: 1;
+    min-width: 250px;
+    background-color: #5ac6c6;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    transition: background-color 0.3s ease;
+}
+
+.event-detail:hover {
+    background-color: rgba(200, 230, 255, 0.8);
+}
+
+@keyframes blink {
+    0% { border-right-color: transparent }
+    50% { border-right-color: aqua }
+    100% { border-right-color: transparent }
+}
+
+#typewriter {
+    border-right: 2px solid aqua;
+    white-space: nowrap;
+    overflow: hidden;
+    animation: blink 0.7s step-end infinite;
+}
+.typewriter-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 60px; /* Adjust this value based on your needs */
+}
+
+#typewriter {
+    border-right: 2px solid aqua;
+    white-space: nowrap;
+    overflow: hidden;
+    animation: blink 0.7s step-end infinite;
     display: inline-block;
-    border-right: 2px solid white;
+    text-align: center;
+}
+
+@keyframes blink {
+    0% { border-right-color: transparent }
+    50% { border-right-color: aqua }
+    100% { border-right-color: transparent }
+}
+
+.home-hero-sub-heading {
+    text-align: center;
+    color: aqua;
+    font-size: 40px;
+    margin-top: 10px;
+    text-shadow: 1px 1px 2px #000, 2px 2px 5px #000, 3px 3px 10px #000;
+}
+
+#event-info-heading {
+    display: inline-block;
+    border-right: white;
     white-space: nowrap;
     overflow: hidden;
     font-size: 36px;
+    color: white;
+    margin-bottom: 30px;
+    padding-right: 5px; /* Add some padding for the cursor */
+}
+
+/* Remove or comment out these rules
+.typing-animation {
+    animation:
+        typing 3.5s steps(18, end),
+        blink-caret .75s step-end infinite;
+    width: 230px;
+}
+
+@keyframes typing {
+    from { width: 0 }
+    to { width: 230px }
+}
+
+@keyframes blink-caret {
+    from, to { border-color: transparent }
+    50% { border-color: var(--primary-color) }
+}
+*/
+
+#competition-rules-heading {
+    display: inline-block;
+    border-right: white;
+    white-space: nowrap;
+    overflow: hidden;
+    font-size: xx-large;
+    color: white;
+    margin: 20px 0 10px;
+    padding-right: 5px;
+}
+
+#about-us-heading {
+    display: inline-block;
+    border-right: white;
+    white-space: nowrap;
+    overflow: hidden;
+    font-size: xx-large;
+    color: white;
+    margin-bottom: 30px;
+    padding-right: 5px;
+}
+
+#organizing-staff-heading {
+    display: inline-block;
+    border-right: white;
+    white-space: nowrap;
+    overflow: hidden;
+    font-size: xx-large;
+    color: white;
+    margin: 20px 0 10px;
+    padding-right: 5px;
+}
+
+#sponsors-heading {
+    display: inline-block;
+    border-right: white;
+    white-space: nowrap;
+    overflow: hidden;
+    font-size: xx-large;
     color: white;
     margin-bottom: 30px;
     padding-right: 5px;
@@ -298,66 +519,46 @@ footer {
     text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5);
 }
 
-.contact-content {
-    color: aqua;
-    font-size: x-large;
-}
+/* Existing styles remain unchanged */
 
-.contact-links {
-    list-style-type: none;
-    padding: 0;
-    margin-top: 20px;
-}
-
-.contact-links li {
-    margin-bottom: 15px;
-}
-
-.contact-links a {
-    color: aqua;
-    text-decoration: none;
-    transition: color 0.3s ease;
-}
-
-.contact-links a:hover {
-    color: #5ac6c6;
-}
-
-.contact-links i {
-    margin-right: 10px;
-}
-
+/* Media query for smaller screens */
 @media screen and (max-width: 768px) {
+    /* Adjust logo size */
     nav .logo {
-        width: 60px;
+        width: 60px; /* Reduce logo size */
     }
 
+    /* Adjust navigation */
     nav ul li a {
-        font-size: 14px;
+        font-size: 14px; /* Smaller font for nav items */
     }
 
+    /* Adjust hero section */
     .home-hero-sub-heading {
-        font-size: 24px;
+        font-size: 24px; /* Smaller font for subtitle */
     }
 
+    /* Adjust buttons */
     .button-3d {
-        padding: 10px 20px;
-        font-size: 16px;
+        padding: 10px 20px; /* Smaller padding */
+        font-size: 16px; /* Smaller font size */
     }
 
+    /* Adjust main content */
     .content-section h2 {
-        font-size: 28px;
+        font-size: 28px; /* Smaller heading size */
     }
 
     .content-section h3 {
-        font-size: 20px;
+        font-size: 20px; /* Smaller subheading size */
     }
 
     .content-section p,
     .content-section li {
-        font-size: 16px;
+        font-size: 16px; /* Smaller font size for paragraphs and list items */
     }
 
+    /* Adjust event details */
     .event-detail h3 {
         font-size: 18px;
     }
@@ -366,39 +567,33 @@ footer {
         font-size: 14px;
     }
 
+    /* Adjust organizing staff */
     #organizing-staff-heading + ul li {
-        font-size: large;
-    }
-
-    .contact-content {
-        font-size: large;
+        font-size: small; /* Slightly smaller than x-large */
     }
 }
 
+/* For even smaller screens */
 @media screen and (max-width: 480px) {
     .home-hero-sub-heading {
-        font-size: 20px;
+        font-size: 20px; /* Even smaller font for subtitle */
     }
 
     .button-3d {
-        padding: 8px 16px;
-        font-size: 14px;
+        padding: 8px 16px; /* Even smaller padding */
+        font-size: 14px; /* Even smaller font size */
     }
 
     .content-section h2 {
-        font-size: 24px;
+        font-size: 24px; /* Even smaller heading size */
     }
 
     .content-section h3 {
-        font-size: 18px;
+        font-size: 18px; /* Even smaller subheading size */
     }
 
     .content-section p,
     .content-section li {
-        font-size: 14px;
-    }
-
-    .contact-content {
-        font-size: medium;
+        font-size: 14px; /* Even smaller font size for paragraphs and list items */
     }
 }
