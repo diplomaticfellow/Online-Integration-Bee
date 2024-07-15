@@ -53,7 +53,7 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     });
 
-
+    // Parallax effect
     window.addEventListener('scroll', () => {
         const sections = document.querySelectorAll('.content-section');
         sections.forEach(section => {
@@ -101,12 +101,6 @@ document.addEventListener('DOMContentLoaded', () => {
             navList.classList.remove('show');
         });
     });
-});
-
-// Add this to your existing JavaScript
-
-document.addEventListener('DOMContentLoaded', () => {
-    // ... (keep your existing code)
 
     // Add ripple effect to buttons
     const buttons = document.querySelectorAll('.button-3d, nav ul li a');
@@ -158,12 +152,8 @@ document.addEventListener('DOMContentLoaded', () => {
 
     window.addEventListener('scroll', animateButtons);
     animateButtons(); // Call once to check initial state
-});
 
-document.addEventListener('DOMContentLoaded', () => {
-    // ... (keep your existing code)
-
-    // Typewriter effect
+    // Typewriter effect for main heading
     const typewriter = document.getElementById('typewriter');
     const text = "Online Integration Bee - 2024";
     let i = 0;
@@ -178,12 +168,6 @@ document.addEventListener('DOMContentLoaded', () => {
 
     typeWriter();
 
-    // ... (keep the rest of your existing code)
-});
-
-document.addEventListener('DOMContentLoaded', () => {
-    // ... (keep your existing code)
-
     // Typewriter effect for Event Information
     const eventInfoHeading = document.getElementById('event-info-heading');
     const eventInfoText = "Event Information";
@@ -193,30 +177,11 @@ document.addEventListener('DOMContentLoaded', () => {
         if (eventInfoIndex < eventInfoText.length) {
             eventInfoHeading.innerHTML += eventInfoText.charAt(eventInfoIndex);
             eventInfoIndex++;
-            setTimeout(typeEventInfo, 100); // Adjust the speed here (lower number = faster)
+            setTimeout(typeEventInfo, 100);
         } else {
-            // Remove the border-right to stop the blinking effect
             eventInfoHeading.style.borderRight = 'none';
         }
     }
-
-    // Intersection Observer for Event Information section
-    const eventInfoObserver = new IntersectionObserver((entries) => {
-        entries.forEach(entry => {
-            if (entry.isIntersecting && eventInfoIndex === 0) {
-                typeEventInfo();
-                eventInfoObserver.unobserve(entry.target);
-            }
-        });
-    }, { threshold: 0.5 });
-
-    eventInfoObserver.observe(document.getElementById('event-info'));
-
-    // ... (keep the rest of your existing code)
-});
-
-document.addEventListener('DOMContentLoaded', () => {
-    // ... (keep your existing code)
 
     // Typewriter effect for Competition Rules
     const competitionRulesHeading = document.getElementById('competition-rules-heading');
@@ -227,30 +192,11 @@ document.addEventListener('DOMContentLoaded', () => {
         if (competitionRulesIndex < competitionRulesText.length) {
             competitionRulesHeading.innerHTML += competitionRulesText.charAt(competitionRulesIndex);
             competitionRulesIndex++;
-            setTimeout(typeCompetitionRules, 100); // Adjust the speed here (lower number = faster)
+            setTimeout(typeCompetitionRules, 100);
         } else {
-            // Remove the border-right to stop the blinking effect
             competitionRulesHeading.style.borderRight = 'none';
         }
     }
-
-    // Intersection Observer for Competition Rules section
-    const competitionRulesObserver = new IntersectionObserver((entries) => {
-        entries.forEach(entry => {
-            if (entry.isIntersecting && competitionRulesIndex === 0) {
-                typeCompetitionRules();
-                competitionRulesObserver.unobserve(entry.target);
-            }
-        });
-    }, { threshold: 0.5 });
-
-    competitionRulesObserver.observe(document.querySelector('.competition-rules'));
-
-    // ... (keep the rest of your existing code)
-});
-
-document.addEventListener('DOMContentLoaded', () => {
-    // ... (keep your existing code)
 
     // Typewriter effect for About Us
     const aboutUsHeading = document.getElementById('about-us-heading');
@@ -261,64 +207,26 @@ document.addEventListener('DOMContentLoaded', () => {
         if (aboutUsIndex < aboutUsText.length) {
             aboutUsHeading.innerHTML += aboutUsText.charAt(aboutUsIndex);
             aboutUsIndex++;
-            setTimeout(typeAboutUs, 100); // Adjust the speed here (lower number = faster)
+            setTimeout(typeAboutUs, 100);
         } else {
-            // Remove the border-right to stop the blinking effect
             aboutUsHeading.style.borderRight = 'none';
         }
     }
 
-    // Intersection Observer for About Us section
-    const aboutUsObserver = new IntersectionObserver((entries) => {
-        entries.forEach(entry => {
-            if (entry.isIntersecting && aboutUsIndex === 0) {
-                typeAboutUs();
-                aboutUsObserver.unobserve(entry.target);
-            }
-        });
-    }, { threshold: 0.5 });
-
-    aboutUsObserver.observe(document.getElementById('about-us'));
-
-    // ... (keep the rest of your existing code)
-});
-
-document.addEventListener('DOMContentLoaded', () => {
-    // ... (keep your existing code)
-
     // Typewriter effect for Organizing staff
-    const organizingstaffHeading = document.getElementById('organizing-staff-heading');
-    const organizingstaffText = "Organizing staff";
-    let organizingstaffIndex = 0;
+    const organizingStaffHeading = document.getElementById('organizing-staff-heading');
+    const organizingStaffText = "Organizing staff";
+    let organizingStaffIndex = 0;
 
-    function typeOrganizingstaff() {
-        if (organizingstaffIndex < organizingstaffText.length) {
-            organizingstaffHeading.innerHTML += organizingstaffText.charAt(organizingstaffIndex);
-            organizingstaffIndex++;
-            setTimeout(typeOrganizingstaff, 100); // Adjust the speed here (lower number = faster)
+    function typeOrganizingStaff() {
+        if (organizingStaffIndex < organizingStaffText.length) {
+            organizingStaffHeading.innerHTML += organizingStaffText.charAt(organizingStaffIndex);
+            organizingStaffIndex++;
+            setTimeout(typeOrganizingStaff, 100);
         } else {
-            // Remove the border-right to stop the blinking effect
-            organizingstaffHeading.style.borderRight = 'none';
+            organizingStaffHeading.style.borderRight = 'none';
         }
     }
-
-    // Intersection Observer for Organizing staff section
-    const organizingstaffObserver = new IntersectionObserver((entries) => {
-        entries.forEach(entry => {
-            if (entry.isIntersecting && organizingstaffIndex === 0) {
-                typeOrganizingstaff();
-                organizingstaffObserver.unobserve(entry.target);
-            }
-        });
-    }, { threshold: 0.5 });
-
-    organizingstaffObserver.observe(document.getElementById('organizing-staff-heading'));
-
-    // ... (keep the rest of your existing code)
-});
-
-document.addEventListener('DOMContentLoaded', () => {
-    // ... (keep your existing code)
 
     // Typewriter effect for Sponsors
     const sponsorsHeading = document.getElementById('sponsors-heading');
@@ -329,24 +237,59 @@ document.addEventListener('DOMContentLoaded', () => {
         if (sponsorsIndex < sponsorsText.length) {
             sponsorsHeading.innerHTML += sponsorsText.charAt(sponsorsIndex);
             sponsorsIndex++;
-            setTimeout(typeSponsors, 100); // Adjust the speed here (lower number = faster)
+            setTimeout(typeSponsors, 100);
         } else {
-            // Remove the border-right to stop the blinking effect
             sponsorsHeading.style.borderRight = 'none';
         }
     }
 
-    // Intersection Observer for Sponsors section
-    const sponsorsObserver = new IntersectionObserver((entries) => {
+    // Typewriter effect for Contact Us
+    const contactUsHeading = document.getElementById('contact-us-heading');
+    const contactUsText = "Contact Us";
+    let contactUsIndex = 0;
+
+    function typeContactUs() {
+        if (contactUsIndex < contactUsText.length) {
+            contactUsHeading.innerHTML += contactUsText.charAt(contactUsIndex);
+            contactUsIndex++;
+            setTimeout(typeContactUs, 100);
+        } else {
+            contactUsHeading.style.borderRight = 'none';
+        }
+    }
+
+    // Intersection Observers for all sections
+    const sectionObserver = new IntersectionObserver((entries) => {
         entries.forEach(entry => {
-            if (entry.isIntersecting && sponsorsIndex === 0) {
-                typeSponsors();
-                sponsorsObserver.unobserve(entry.target);
+            if (entry.isIntersecting) {
+                switch(entry.target.id) {
+                    case 'event-info':
+                        if (eventInfoIndex === 0) typeEventInfo();
+                        break;
+                    case 'competition-rules':
+                        if (competitionRulesIndex === 0) typeCompetitionRules();
+                        break;
+                    case 'about-us':
+                        if (aboutUsIndex === 0) typeAboutUs();
+                        break;
+                    case 'organizing-staff-heading':
+                        if (organizingStaffIndex === 0) typeOrganizingStaff();
+                        break;
+                    case 'sponsors':
+                        if (sponsorsIndex === 0) typeSponsors();
+                        break;
+                    case 'contact-us':
+                        if (contactUsIndex === 0) typeContactUs();
+                        break;
+                }
+                sectionObserver.unobserve(entry.target);
             }
         });
     }, { threshold: 0.5 });
 
-    sponsorsObserver.observe(document.getElementById('sponsors'));
-
-    // ... (keep the rest of your existing code)
+    // Observe all sections
+    document.querySelectorAll('.content-section').forEach(section => {
+        sectionObserver.observe(section);
+    });
+    sectionObserver.observe(document.getElementById('organizing-staff-heading'));
 });
