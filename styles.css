@@ -597,3 +597,55 @@ nav ul li a,
         font-size: 14px; /* Even smaller font size for paragraphs and list items */
     }
 }
+
+#contact-us-heading {
+    display: inline-block;
+    border-right: white;
+    white-space: nowrap;
+    overflow: hidden;
+    font-size: xx-large;
+    color: white;
+    margin-bottom: 30px;
+    padding-right: 5px;
+}
+
+.contact-content {
+    color: aqua;
+    font-size: x-large;
+}
+
+.contact-links {
+    list-style-type: none;
+    padding: 0;
+    margin-top: 20px;
+}
+
+.contact-links li {
+    margin-bottom: 15px;
+}
+
+.contact-links a {
+    color: aqua;
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+.contact-links a:hover {
+    color: #5ac6c6;
+}
+
+.contact-links i {
+    margin-right: 10px;
+}
+
+@media screen and (max-width: 768px) {
+    .contact-content {
+        font-size: large;
+    }
+}
+
+@media screen and (max-width: 480px) {
+    .contact-content {
+        font-size: medium;
+    }
+}
