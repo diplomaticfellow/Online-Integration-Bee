@@ -628,3 +628,29 @@ nav ul li a,
         gap: 15px;
     }
 }
+
+.sponsor-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+    background-color: #f0f0f0; /* Adjust the background color as needed */
+    border-radius: 10px; /* Add rounded corners */
+}
+
+.sponsor-box {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    width: 100%; /* The box will span the full width of the container */
+}
+
+.sponsor-box a {
+    margin: 0 10px; /* Adjust the spacing between logos */
+}
+
+.sponsor-box img {
+    max-width: 150px; /* Adjust the width as needed */
+    max-height: 100px; /* Adjust the height as needed */
+    object-fit: contain; /* Ensure the logos maintain their aspect ratio */
+}
