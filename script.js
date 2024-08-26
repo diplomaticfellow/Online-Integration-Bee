@@ -322,7 +322,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
     // Typewriter effect for Sponsors
     const sponsorsHeading = document.getElementById('sponsors-heading');
-    const sponsorsText = "Our Sponsors";
+    const sponsorsText = "Our Partners";
     let sponsorsIndex = 0;
 
     function typeSponsors() {
