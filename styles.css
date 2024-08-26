@@ -655,19 +655,16 @@ nav ul li a,
     object-fit: contain; /* Ensure the logos maintain their aspect ratio */
 }
 
-.black-sponsor {
-    background-color: black;
+/* Specific styling for the Jane Street sponsor box */
+.sponsor-box a:first-child {
+    background-color: black; /* Make the Jane Street box black */
     padding: 10px;
     border-radius: 8px; /* Optional: adds rounded corners */
-    display: flex; /* Ensures alignment similar to other sponsor boxes */
-    justify-content: center; /* Center the content within the black sponsor box */
-    align-items: center; /* Vertically center the content */
 }
 
-.black-sponsor img {
-    filter: brightness(0) invert(1); /* Optional: inverts the logo color for visibility */
-    max-width: 150px; /* Ensure consistent logo size with other sponsors */
-    max-height: 100px; /* Ensure consistent logo size with other sponsors */
+.sponsor-box a:first-child img {
+    filter: none; /* Ensure the logo is unaffected (removes any invert or brightness) */
 }
+
 
 
