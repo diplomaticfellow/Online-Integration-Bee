@@ -654,17 +654,3 @@ nav ul li a,
     max-height: 100px; /* Adjust the height as needed */
     object-fit: contain; /* Ensure the logos maintain their aspect ratio */
 }
-
-/* Specific styling for the Jane Street sponsor box */
-.sponsor-box a:first-child {
-    background-color: black; /* Make the Jane Street box black */
-    padding: 10px;
-    border-radius: 8px; /* Optional: adds rounded corners */
-}
-
-.sponsor-box a:first-child img {
-    filter: none; /* Ensure the logo is unaffected (removes any invert or brightness) */
-}
-
-
-
