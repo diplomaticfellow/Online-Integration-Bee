@@ -629,34 +629,69 @@ nav ul li a,
     }
 }
 
-/* General Styles */
-.sponsor-container {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    gap: 20px; /* Space between sponsor boxes */
-}
-
-.sponsor-box {
-    flex: 1 1 auto; /* Flex-grow, flex-shrink, and flex-basis */
-    max-width: 200px; /* Maximum width for each sponsor box */
-    box-sizing: border-box;
+.sponsor-grid {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    gap: 20px;
+    justify-items: center;
+    align-items: center;
 }
 
 .sponsor img {
-    width: 100%; /* Make images responsive */
-    height: auto; /* Maintain aspect ratio */
+    max-width: 100%;
+    height: auto;
+    transition: transform 0.3s ease;
 }
 
-/* Media Queries */
-@media (max-width: 768px) {
-    .sponsor-box {
-        max-width: 150px; /* Smaller max-width for smaller screens */
-    }
+.sponsor img:hover {
+    transform: scale(1.05);
 }
 
-@media (max-width: 480px) {
-    .sponsor-box {
-        max-width: 120px; /* Even smaller max-width for very small screens */
-    }
+footer {
+    background-color: var(--primary-color);
+    color: var(--text-color);
+    text-align: center;
+    padding: 20px 0;
+}
+
+.social-links {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+}
+
+.social-links .social-icon {
+    color: var(--text-color);
+    font-size: 24px;
+    transition: color 0.3s ease;
+}
+
+.social-links .social-icon:hover {
+    color: var(--secondary-color);
+}
+
+.sponsor-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+    background-color: #f0f0f0; /* Adjust the background color as needed */
+    border-radius: 10px; /* Add rounded corners */
+}
+
+.sponsor-box {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    width: 100%; /* The box will span the full width of the container */
+}
+
+.sponsor-box a {
+    margin: 0 10px; /* Adjust the spacing between logos */
+}
+
+.sponsor-box img {
+    max-width: 150px; /* Adjust the width as needed */
+    max-height: 100px; /* Adjust the height as needed */
+    object-fit: contain; /* Ensure the logos maintain their aspect ratio */
 }
