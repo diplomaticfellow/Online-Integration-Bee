@@ -630,13 +630,13 @@ nav ul li a,
 }
 
 /* styles.css */
-
 /* General Styles */
 .sponsor-container {
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
     gap: 20px; /* Space between sponsor boxes */
+    padding: 20px; /* Add padding for better spacing */
 }
 
 .sponsor-box {
@@ -655,10 +655,18 @@ nav ul li a,
     .sponsor-box {
         max-width: 150px; /* Smaller max-width for smaller screens */
     }
+
+    .sponsor-container {
+        padding: 10px; /* Adjust padding for smaller screens */
+    }
 }
 
 @media (max-width: 480px) {
     .sponsor-box {
         max-width: 120px; /* Even smaller max-width for very small screens */
+    }
+
+    .sponsor-container {
+        padding: 5px; /* Adjust padding for very small screens */
     }
 }
