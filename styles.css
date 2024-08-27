@@ -629,28 +629,36 @@ nav ul li a,
     }
 }
 
+/* styles.css */
+
+/* General Styles */
 .sponsor-container {
     display: flex;
+    flex-wrap: wrap;
     justify-content: center;
-    align-items: center;
-    padding: 20px;
-    background-color: #f0f0f0; /* Adjust the background color as needed */
-    border-radius: 10px; /* Add rounded corners */
+    gap: 20px; /* Space between sponsor boxes */
 }
 
 .sponsor-box {
-    display: flex;
-    justify-content: space-around;
-    align-items: center;
-    width: 100%; /* The box will span the full width of the container */
+    flex: 1 1 auto; /* Flex-grow, flex-shrink, and flex-basis */
+    max-width: 200px; /* Maximum width for each sponsor box */
+    box-sizing: border-box;
 }
 
-.sponsor-box a {
-    margin: 0 10px; /* Adjust the spacing between logos */
+.sponsor img {
+    width: 100%; /* Make images responsive */
+    height: auto; /* Maintain aspect ratio */
 }
 
-.sponsor-box img {
-    max-width: 150px; /* Adjust the width as needed */
-    max-height: 100px; /* Adjust the height as needed */
-    object-fit: contain; /* Ensure the logos maintain their aspect ratio */
+/* Media Queries */
+@media (max-width: 768px) {
+    .sponsor-box {
+        max-width: 150px; /* Smaller max-width for smaller screens */
+    }
+}
+
+@media (max-width: 480px) {
+    .sponsor-box {
+        max-width: 120px; /* Even smaller max-width for very small screens */
+    }
 }
