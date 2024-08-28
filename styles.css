@@ -671,7 +671,7 @@ footer {
 }
 
 .sponsor-container {
-    display: flex;
+    display: flex !important;
     justify-content: center;
     align-items: center;
     padding: 20px;
