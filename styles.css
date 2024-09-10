@@ -695,3 +695,43 @@ footer {
     max-height: 100px; /* Adjust the height as needed */
     object-fit: contain; /* Ensure the logos maintain their aspect ratio */
 }
+
+footer {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    background-color: rgba(2, 54, 123, 0.8); /* Adjust as needed */
+    color: var(--text-color);
+    text-align: center;
+    padding: 10px 0;
+    z-index: 1000; /* Ensures it stays on top */
+}
+
+.footer-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+footer p {
+    margin: 5px 0;
+    font-size: 14px;
+    color: white;
+}
+
+.sponsor-info {
+    font-size: 12px;
+}
+
+.social-links {
+    margin-top: 10px;
+}
+
+.social-links a {
+    margin: 0 10px;
+    color: white;
+    font-size: 18px;
+    text-decoration: none;
+}
+
