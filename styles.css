@@ -495,17 +495,6 @@ nav ul li a,
     padding-right: 5px;
 }
 
-#sponsors-heading {
-    display: inline-block;
-    border-right: white;
-    white-space: nowrap;
-    overflow: hidden;
-    font-size: xx-large;
-    color: white;
-    margin-bottom: 30px;
-    padding-right: 5px;
-}
-
 #organizing-staff-heading + ul {
     list-style-type: none;
     padding: 0;
